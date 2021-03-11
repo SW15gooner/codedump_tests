@@ -11,14 +11,14 @@ x = []
 y = []
 for o in range(10):
     list=[]
-    f = open("Lottery-output.txt", "a")
+    f = open("experiments/Lottery-output.txt", "a")
     for i in range(6):
         randList = random.sample(range(1,59),k=6)
         if randList not in list: list.append(randList)
     print("{} {} {} {} {} {}".format(*randList), file=f)
     f.close()
 
-    with open('Lottery-output.txt', 'r') as csvfile:
+    with open('experiments/Lottery-output.txt', 'r') as csvfile:
         plots= csv.reader(csvfile, delimiter=' ')
         for row in plots:
             x.append(int(row[0]))

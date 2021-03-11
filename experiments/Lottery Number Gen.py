@@ -3,7 +3,7 @@
 
 import random
 list=[]
-f = open("Lottery-output.txt", "a")
+f = open("experiments/Lottery-output.txt", "a")
 for i in range(6):
     randList = random.sample(range(1,59),k=6)
     if randList not in list: list.append(randList)

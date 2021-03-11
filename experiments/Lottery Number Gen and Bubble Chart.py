@@ -16,7 +16,7 @@ d1 = today.strftime("%d/%m/%Y")
 # Open text file and generate 6 non-repeating numbers 10 times
 for o in range(10):
     list=[]
-    f = open("Lottery-output.txt", "a")
+    f = open("experiments/Lottery-output.txt", "a")
     for i in range(6):
         randList = random.sample(range(1,59),k=6)
         if randList not in list: list.append(randList)
@@ -24,21 +24,21 @@ for o in range(10):
     f.close()
 # Re-open file to do Occurance count, adding count number to first column, then number, then occurences
 
-with open("Lottery-output.txt", 'r') as fh:
+with open("experiments/Lottery-output.txt", 'r') as fh:
     r = 0
     # setting space as a common delimiter
     contents = re.sub(r':|\n', ' ', fh.read()).split()
     counts = collections.Counter(contents)
 
 # Zero old Counts file for a new count, and add headers
-open("Lottery-counts.txt", 'w').close()
-a = open("Lottery-counts.txt", 'w')
+open("experiments/Lottery-counts.txt", 'w').close()
+a = open("experiments/Lottery-counts.txt", 'w')
 print("Sequence,Numbers,Occurences", file=a)
 a.close() # Close to fix headers and not get overwritten by next
 
 # iterating through `number` counts
 for a in counts:
-    s = open("Lottery-counts.txt", "a")
+    s = open("experiments/Lottery-counts.txt", "a")
     r = r+1
     print(r, ',', a, ',' ,counts[a], file=s)
     s.close() # Close to complete 58 lines
@@ -47,7 +47,7 @@ for a in counts:
 
 sns.set(style="ticks")
 # sns.set(style="whitegrid")
-mov = pd.read_csv("Lottery-counts.txt")
+mov = pd.read_csv("experiments/Lottery-counts.txt")
 
 x=mov.Sequence
 #delete ol Numbers to make it spread 'up' with occurence as well as size of Bubble

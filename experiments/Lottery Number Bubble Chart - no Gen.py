@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 sns.set(style="ticks")
 # sns.set(style="whitegrid")
-mov = pd.read_csv("Lottery-counts.txt")
+mov = pd.read_csv("experiments/Lottery-counts.txt")
 
 x=mov.Sequence
 #delete ol Numbers to make it spread 'up' with occurence as well as size of Bubble

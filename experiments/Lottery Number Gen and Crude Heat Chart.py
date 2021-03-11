@@ -6,14 +6,14 @@ import matplotlib.pylab as mp
 import random
 for o in range(10):
     list=[]
-    f = open("Lottery-output.txt", "a")
+    f = open("experiments/Lottery-output.txt", "a")
     for i in range(6):
         randList = random.sample(range(1,59),k=6)
         if randList not in list: list.append(randList)
     print("{} {} {} {} {} {}".format(*randList), file=f)
     f.close()
 # Open file again for Heatmap
-data_set = pd.read_csv("Lottery-output.txt", sep=" ")
+data_set = pd.read_csv("experiments/Lottery-output.txt", sep=" ")
 #dataplot = sb.heatmap(data_set.corr(), cmap="YlGnBu", annot=True)
 corr = data_set.corr()
 ax = sb.heatmap(
