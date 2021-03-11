@@ -4,3 +4,5 @@ I am a 25+ year Network Engineer who has driven everything via CLI/GUI, and used
 Since this Covid stuff, I have been slowly learning Python while working.
 
 Here is a collection of random smatterings. There is no obvious structure here, this is a dumping ground. I will attempt to comment each file and add descriptions elsewhere.
+
+Also, I pretty sure most can be done much much more efficiently, and the code might seem all over the place in places. Part of the learning curve ;)
