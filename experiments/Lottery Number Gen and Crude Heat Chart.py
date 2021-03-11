@@ -1,5 +1,5 @@
 # Lottery number generator
-# 6 non-repeating numbers
+# 6 non-repeating numbers and crude Heat Chart
 import pandas as pd
 import seaborn as sb
 import matplotlib.pylab as mp

@@ -3,4 +3,4 @@ I am a 25+ year Network Engineer who has driven everything via CLI/GUI, and used
 
 Since this Covid stuff, I have been slowly learning Python while working.
 
-Here is a collection of random smatterings
+Here is a collection of random smatterings. There is no obvious structure here, this is a dumping ground. I will attempt to comment each file and add descriptions elsewhere.

@@ -1,5 +1,6 @@
 # Lottery number generator
-# 6 non-repeating numbers
+# 6 non-repeating numbers, saved to two text files. One with Generated numbers and the other with the number of occurences
+# Plus Bubble Graph showing prevelance of each number
 import matplotlib.pyplot as plt
 import csv
 import numpy as np
@@ -12,7 +13,7 @@ import random
 from datetime import date
 today = date.today()
 d1 = today.strftime("%d/%m/%Y")
-# Open tet file and generate 6 non-repeating numbers 10 times
+# Open text file and generate 6 non-repeating numbers 10 times
 for o in range(10):
     list=[]
     f = open("Lottery-output.txt", "a")

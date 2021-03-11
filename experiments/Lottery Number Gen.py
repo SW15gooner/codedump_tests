@@ -1,5 +1,5 @@
 # Lottery number generator
-# 6 non-repeating numbers
+# 6 non-repeating numbers saved to a Text file
 
 import random
 list=[]
