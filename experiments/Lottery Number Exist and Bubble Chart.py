@@ -13,16 +13,8 @@ import random
 from datetime import date
 today = date.today()
 d1 = today.strftime("%d/%m/%Y")
-# Open text file and generate 6 non-repeating numbers 10 times
-for o in range(10):
-    list=[]
-    f = open("Lottery-output.txt", "a")
-    for i in range(6):
-        randList = random.sample(range(1,59),k=6)
-        if randList not in list: list.append(randList)
-    print("{} {} {} {} {} {}".format(*randList), file=f)
-    f.close()
-# Re-open file to do Occurance count, adding count number to first column, then number, then occurences
+
+# open file to do Occurance count, adding count number to first column, then number, then occurences
 
 with open("Lottery-output.txt", 'r') as fh:
     r = 0

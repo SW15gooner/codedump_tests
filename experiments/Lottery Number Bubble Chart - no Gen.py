@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 sns.set(style="ticks")
 # sns.set(style="whitegrid")
-mov = pd.read_csv("experiments/Lottery-counts.txt")
+mov = pd.read_csv("Lottery-counts.txt")
 
 x=mov.Sequence
 #delete ol Numbers to make it spread 'up' with occurence as well as size of Bubble
@@ -15,7 +15,7 @@ y=mov.Occurences
 z=mov.Occurences
 
 cm = plt.cm.get_cmap('coolwarm')
-fig, ax = plt.subplots(figsize=(12,10))
+fig, ax = plt.subplots(figsize=(10,8))
 
 sc = ax.scatter(x,y,s=z*3, c=z,cmap=cm, linewidth=0.2, alpha=0.5)
 #test
@@ -28,6 +28,7 @@ for x, y in enumerate(mov.Numbers):
 ax.grid()
 fig.colorbar(sc)
 
+ax.set_title('Frequency of automatically random generated Lottery Numbers', fontsize=18)
 ax.set_xlabel('Number Selected (what number)', fontsize=14)
 ax.set_ylabel('Occurences of Number (how often)', fontsize=14)
 
