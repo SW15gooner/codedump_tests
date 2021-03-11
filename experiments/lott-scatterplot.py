@@ -1,5 +1,6 @@
 # Lottery number generator
 # 6 non-repeating numbers
+# and a shoddy looking Scatter graph
 import csv
 import matplotlib.pyplot as plt
 import random
