@@ -6,3 +6,6 @@ Thumbs.db
 .Trashes
 *-output.txt
 *-counts.txt
+build
+dist
+*.spec
