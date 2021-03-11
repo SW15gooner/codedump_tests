@@ -1,1 +1,8 @@
 .vscode
+.DS_Store
+._*
+Thumbs.db
+.Spotlight-V100
+.Trashes
+*-output.txt
+*-counts.txt
