@@ -1,0 +1,13 @@
+Clare [3127.11] Budget
+Gary [2490.26] Budget
+Budget [442.60] Mortgage
+Budget [117.00] Council Tax
+Budget [46.25] E.On
+Budget [28.40] Water
+Budget [10.43] British Gas Ins
+Budget [20.88] Mortgage Insurance
+Budget [45.49] BT
+Budget [8.99] NetFlix
+Budget [12.83] TV Licence
+Budget [60] Building Maintenace
+Budget [364.10] Mazda

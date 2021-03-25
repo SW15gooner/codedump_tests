@@ -1,0 +1,1 @@
+=CONCATENATE(B3," [",E3,"] ",C3)
