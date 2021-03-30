@@ -1,9 +1,36 @@
  #!/usr/bin/python3
 from chatterbot import ChatBot #import the chatbot
 from chatterbot.trainers import ChatterBotCorpusTrainer
+from chatterbot import preprocessors
 import os
+
+# System call
+os.system("")
+
+# Class of different styles
+class style():
+    BLACK = '\033[30m'
+    RED = '\033[31m'
+    GREEN = '\033[32m'
+    YELLOW = '\033[33m'
+    BLUE = '\033[34m'
+    MAGENTA = '\033[35m'
+    CYAN = '\033[36m'
+    WHITE = '\033[37m'
+    UNDERLINE = '\033[4m'
+    RESET = '\033[0m'
+
+print(style.YELLOW + "Gary Wheller - ChatBot")
+
 ##speech
 import pyttsx3
+import sys
+
+## This and SYS are for Pyinstaller
+if getattr(sys, 'frozen', False) and hasattr(sys, '_MEIPASS'):
+    os.chdir(sys._MEIPASS)
+## End
+
 engineio = pyttsx3.init()
 voices = engineio.getProperty('voices')
 
@@ -15,10 +42,23 @@ def speak(text):
 bot= ChatBot('Bot')
 trainer = ChatterBotCorpusTrainer(bot)
 
-corpus_path = 'chatterbot_corpus/data/english/'
+corpus_path = 'english/' ## Does not run without english/ path, this is for pyinstaller
 
 for file in os.listdir(corpus_path):
     trainer.train(corpus_path + file)
+
+engineio.setProperty('rate', 130)
+engineio.setProperty('voice',voices[0].id)
+print('Hello You. Do you want to play a game?')
+speak('Hello You. Do you want to play a game?')
+print('I am an AI based, learning ChatBot')
+speak('I am an AI based, learning ChatBot')
+print('I listen to what you say, and my friend learns the best response')
+speak('I listen to what you say, and my friend learns the best response')
+print('She speaks gibberish for a while. bare with us')
+speak('She speaks gibberish for a while. bare with us')
+print(style.RED + "Ask a question")
+speak('Ask a question')
 
 while True:
     message = input('You:')
@@ -27,11 +67,11 @@ while True:
     engineio.setProperty('voice',voices[0].id)
     speak(message)
     if message.strip() == 'Bye':
-        print('ChatBot: Bye')
+        print(style.YELLOW + 'ChatBot: Bye')
         break
     else:
         reply = bot.get_response(message)
         engineio.setProperty('rate', 180)
         engineio.setProperty('voice',voices[1].id)
         speak(reply)
-        print('ChatBot:', reply)
+        print(style.WHITE + 'ChatBot:', reply)
