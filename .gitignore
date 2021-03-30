@@ -10,3 +10,4 @@ build
 dist
 *.spec
 __pycache__
+*.sqlite3

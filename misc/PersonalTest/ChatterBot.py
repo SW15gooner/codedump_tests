@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 import PySimpleGUI as sg
 from chatterbot import ChatBot
+from chatterbot.trainers import ChatterBotCorpusTrainer
 import chatterbot.utils
+import time
 
 
 '''

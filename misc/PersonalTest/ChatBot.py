@@ -1,4 +1,5 @@
 import PySimpleGUI as sg
+import time
 from chatterbot import ChatBot
 import chatterbot.utils
 
