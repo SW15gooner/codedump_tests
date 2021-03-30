@@ -57,8 +57,8 @@ print('I listen to what you say, and my friend learns the best response')
 speak('I listen to what you say, and my friend learns the best response')
 print('She speaks gibberish for a while. bare with us')
 speak('She speaks gibberish for a while. bare with us')
-print(style.RED + "Ask a question")
-speak('Ask a question')
+print(style.RED + 'Ask a question. Say Bye to leave')
+speak('Ask a question. SAy Bye to leave')
 
 while True:
     message = input('You:')
