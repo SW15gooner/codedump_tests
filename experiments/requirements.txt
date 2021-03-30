@@ -1,0 +1,4 @@
+
+pytz
+##speech
+pyttsx3

@@ -5,8 +5,6 @@ import os
 import pyttsx3
 engineio = pyttsx3.init()
 voices = engineio.getProperty('voices')
-engineio.setProperty('rate', 130)    # Aquí puedes seleccionar la velocidad de la voz
-engineio.setProperty('voice',voices[0].id)
 
 def speak(text):
     engineio.say(text)
@@ -24,11 +22,15 @@ for file in os.listdir(corpus_path):
 while True:
     message = input('You:')
     print(message)
+    engineio.setProperty('rate', 130)
+    engineio.setProperty('voice',voices[0].id)
     speak(message)
     if message.strip() == 'Bye':
         print('ChatBot: Bye')
         break
     else:
         reply = bot.get_response(message)
+        engineio.setProperty('rate', 180)
+        engineio.setProperty('voice',voices[1].id)
         speak(reply)
         print('ChatBot:', reply)
