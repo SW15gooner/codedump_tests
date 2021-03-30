@@ -4,6 +4,7 @@ from chatterbot.trainers import ChatterBotCorpusTrainer
 from chatterbot import preprocessors
 import os
 import tkinter as tk
+
 from tkinter import simpledialog
 
 ROOT = tk.Tk()
