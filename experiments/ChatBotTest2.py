@@ -1,3 +1,4 @@
+ #!/usr/bin/python3
 from chatterbot import ChatBot #import the chatbot
 from chatterbot.trainers import ChatterBotCorpusTrainer
 import os
