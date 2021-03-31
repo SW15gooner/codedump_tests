@@ -62,9 +62,9 @@ class Application(tk.Frame):
         self.text.configure(yscrollcommand=self.vsb.set)
         self.vsb.pack(side="right", fill="y")
         self.text.pack(side="left", fill="both", expand=True)
-        self.text.insert("end", "Hello You. Do you want to play a game?\n")
+        self.text.insert("end", "Hello You. Do you want to play a game?\n\nI am an AI Learning ChatBot\nI pickup what you say and search a semantics\nDatabase for a response\n")
         speak('Hello You. Do you want to play a game?')
-        self.text.insert("end", "Ask us a question.\n")
+        self.text.insert("end", "\nAsk us a question.")
         speak('Ask us a question.')
         self.text.bind("<Return>", self.process_input)
         self.prompt = ">>> "
@@ -92,7 +92,7 @@ class Application(tk.Frame):
         # do that here, then skip the class binding.
         self.text.insert("end", "\n")
         command = self.text.get("end-of-prompt", "end-1c")
-        self.text.insert("end", "You asked '%s'" % command)
+        self.text.insert("end", command)
         engineio.setProperty('rate', 130)
         engineio.setProperty('voice',voices[0].id)
         speak(command)
@@ -100,7 +100,7 @@ class Application(tk.Frame):
         engineio.setProperty('rate', 180)
         engineio.setProperty('voice',voices[1].id)
         speak(reply)
-        self.text.insert("end", "I said '%s'" % reply)
+        self.text.insert("end", reply)
         self.text.see("end")
         self.insert_prompt()
 
