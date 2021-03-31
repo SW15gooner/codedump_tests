@@ -152,14 +152,20 @@ if __name__ == '__main__':
     biden_image = face_recognition.load_image_file("biden.jpg")
     biden_face_encoding = face_recognition.face_encodings(biden_image)[0]
 
+    # Load a third sample picture and learn how to recognize it.
+    me_image = face_recognition.load_image_file("me.jpg")
+    me_face_encoding = face_recognition.face_encodings(me_image)[0]
+
     # Create arrays of known face encodings and their names
     Global.known_face_encodings = [
         obama_face_encoding,
-        biden_face_encoding
+        biden_face_encoding,
+        me_face_encoding
     ]
     Global.known_face_names = [
         "Barack Obama",
-        "Joe Biden"
+        "Joe Biden",
+        "Gary Wheller"
     ]
 
     # Create workers
