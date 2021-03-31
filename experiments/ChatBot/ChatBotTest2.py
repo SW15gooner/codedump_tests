@@ -7,7 +7,8 @@ import tkinter as tk
 from tkinter import simpledialog
 
 ROOT = tk.Tk()
-
+ROOT.wm_attributes("-topmost", 1)
+ROOT.focus_force()
 ROOT.withdraw()
 
 # System call

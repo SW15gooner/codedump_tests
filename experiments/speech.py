@@ -1,5 +1,4 @@
 import pyttsx3
-# import engineio #engineio module is not needed.
 
 engineio = pyttsx3.init()
 voices = engineio.getProperty('voices')
