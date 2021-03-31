@@ -15,3 +15,5 @@ __pycache__
 /experiments/ChatBot/reddit_chat/chatbot-rnn/models
 models/
 C:\Users\gawhe\github\codedump_tests\experiments\ChatBot\reddit_chat\chatbot-rnn\models
+*.npz
+*.pkl
