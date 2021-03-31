@@ -11,3 +11,7 @@ build
 *.spec
 __pycache__
 *.sqlite3
+\experiments\ChatBot\reddit_chat\chatbot-rnn\models
+/experiments/ChatBot/reddit_chat/chatbot-rnn/models
+models/
+C:\Users\gawhe\github\codedump_tests\experiments\ChatBot\reddit_chat\chatbot-rnn\models
