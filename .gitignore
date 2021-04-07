@@ -7,7 +7,7 @@ Thumbs.db
 *-output.txt
 *-counts.txt
 build
-##dist
+dist
 *.spec
 __pycache__
 *.sqlite3

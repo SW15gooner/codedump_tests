@@ -1,4 +1,4 @@
- #!/usr/bin/python3
+## console version
 from chatterbot import ChatBot #import the chatbot
 from chatterbot.trainers import ChatterBotCorpusTrainer
 from chatterbot import preprocessors
