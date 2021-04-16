@@ -1,4 +1,4 @@
-# Lottery number generator
+# Lottery number generator 
 # 6 non-repeating numbers, saved to two text files. One with Generated numbers and the other with the number of occurences
 # Plus Bubble Graph showing prevelance of each number
 import matplotlib.pyplot as plt
