@@ -6,6 +6,10 @@ from chatterbot.trainers import ChatterBotCorpusTrainer
 from chatterbot import preprocessors
 import os
 os.system("")
+cwd = os.getcwd()
+script = os.path.realpath(__file__)
+print("Current Directory:", cwd)
+print("Script path:", script)
 
 ## start speech
 import pyttsx3
