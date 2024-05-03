@@ -23,7 +23,7 @@ biden_image = face_recognition.load_image_file("biden.jpg")
 biden_face_encoding = face_recognition.face_encodings(biden_image)[0]
 
 # Load a third sample picture and learn how to recognize it.
-clare_image = face_recognition.load_image_file("clare.jpg")
+clare_image = face_recognition.load_image_file("me.jpg")
 clare_face_encoding = face_recognition.face_encodings(clare_image)[0]
 
 # Create arrays of known face encodings and their names
@@ -35,7 +35,7 @@ known_face_encodings = [
 known_face_names = [
     "Barack Obama",
     "Joe Biden",
-    "Hampette"
+    "Gary"
 ]
 
 # Initialize some variables

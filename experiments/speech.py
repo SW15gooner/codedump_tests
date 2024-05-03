@@ -8,7 +8,7 @@ while(1):
         engineio.say(text)
         engineio.runAndWait()
     engineio.setProperty('rate', 130)    # Aquí puedes seleccionar la velocidad de la voz
-    engineio.setProperty('voice',voices[0].id)
+    engineio.setProperty('voice',voices[1].id)
     speak("What do you want me to say?")
     phrase = input("--> ")
     if (phrase == "exit"):
